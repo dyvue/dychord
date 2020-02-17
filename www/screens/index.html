@@ -12,12 +12,46 @@
 </head>
 <body>
     <div id="app">
-        <div class="flex items-center justify-center flex-col w-full h-full">
-            <div class="w-full flex justify-center flex-col items-center text-center">
-                <div id="intro1" class="c-intro active">
-                    <div class="flex justify-center flex-col items-center">
-                        <span class="font-bold text-3xl c-text-default">Dashboard</span>
-                        <div class="c-divider-header mt-2"></div>
+        <div class="flex flex-col w-full h-full">
+            <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-10">
+                <a href=""><i class="fab fa-rev"></i></a>
+                <div class="relative w-full flex justify-center items-center text-center">
+                    <a href="./index.html"><i class="fas fa-circle"></i></a>
+                </div>
+                <a href="./profile.html"><i class="far fa-user"></i></a>
+            </div>
+            <div class="c-wrapper-top p-8 pb-24">
+                <div class="c-search">
+                    <form action="">
+                        <div class="c-search-wrapper flex items-center">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="c-form-control search" placeholder="Temukan chord..." name="q">
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full flex flex-col mt-10">
+                    <span class="font-bold text-2xl c-text-white">Halo, Romadhan</span>
+                    <div class="c-divider-header bg-white mt-2"></div>
+                </div>
+                <div class="absolute left-0 mt-10 w-full mx-4">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                        <img class="c-banner" src="../assets/images/dummy/banner.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 p-8">
+                <p class="text-2xl font-bold c-text-default">Chord terpopuler</p>
+                <div class="relative w-100 overflow-auto mt-5">
+                    <div class="flex">
+                        <div class="w-56 max-w-sm rounded overflow-hidden c-box-shadow mx-2">
+                            <img class="w-full" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
+                            <div class="px-6 py-4">
+                              <div class="font-bold text-xl mb-2">You Are The Reason</div>
+                              <p class="c-text-default text-base">
+                                Romadhan
+                              </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,9 @@ body{
 .c-text-default{
     color: #1e272e;
 }
+.c-text-white{
+    color: #fff;
+}
 .btn{
     color: #fff;
     padding: 8px 16px;
@@ -82,6 +85,27 @@ body{
 .c-form-control:focus{
     border-bottom: 1.5px solid #1e272e;
 }
+.c-search-wrapper{
+    border: 1px solid #474787;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+.c-search-wrapper .fas{
+    color: #CCC;
+    margin-right: 15px;
+}
+.c-form-control.search{
+    border: none;
+}
+.c-wrapper-top{
+    background-color: #474787;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+.c-box-shadow{
+    border: 1px solid #eee
+}
 
 
 
@@ -92,10 +116,50 @@ body{
     width: 50px;
     height: 2px;
 }
+.c-divider-header.bg-white{
+    background-color: #fff;
+}
 .c-intro{
     transition: .5s ease-out;
     transform: translateX(1000px);
 }
 .c-intro.active{
     transform: translateX(0);
+}
+.c-banner{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.bg-primary{
+    background-color: #474787;
+}
+.bg-yellow{
+    background-color: #f39c12;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+
+/* TABS */
+.tabs{
+    background-color: #474787;
+    border-radius: 30px;
+}
+.tabs a{
+    color: #fff;
+    padding: 20px;
+}
+.tabs a i{
+    font-size: 25px;
+}
+.tabs .relative a{
+    position: absolute;
+    top: -20px;
+    background-color: #fff;
+    border: 3px solid #474787;
+    color: #474787;
+    border-radius: 30px;
 }
