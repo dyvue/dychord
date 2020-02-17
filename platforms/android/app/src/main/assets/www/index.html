@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Dychord &mdash; Splashscreen</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/tailwind.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/styles/font.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="flex items-center justify-center flex-col h-full">
+            <div class="flex mt-20">
+                <div class="w-1/6"></div>
+                <div class="w-4/6">
+                    <img src="assets/images/splashscreen/hello.svg" alt="Hello" class="w-full">
+                </div>
+                <div class="w-1/6"></div>
+            </div>
+            <div class="mt-10">
+                <div class="w-full text-center">
+                    <span class="text-3xl font-bold c-text-primary">Dychord</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full text-center mb-5">
+            <span class="text-xs">Copyright &copy; 2020 &mdash; Dychord</span>
+        </div>
+    </div>
+
+    <script src="assets/scripts/jquery.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    <script>
+        setTimeout(function(){
+            $('#app').fadeOut("slow")
+        }, 2000)
+        setTimeout(function(){
+            window.location = "screens/index.html"
+        }, 4000)
+    </script>
+</body>
+</html>

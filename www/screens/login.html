@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Dychord</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/tailwind.css">
+    
+    <link rel="stylesheet" type="text/css" href="../assets/styles/font.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="flex items-center justify-center flex-col w-full h-full">
+            <div class="w-full flex justify-center flex-col items-center text-center">
+              <div class="flex justify-center flex-col items-center">
+                  <span class="font-bold text-3xl c-text-default">Masuk</span>
+                  <div class="c-divider-header mt-2"></div>
+              </div>
+              <div class="flex mt-20">
+                  <div class="w-1/6"></div>
+                  <div class="w-4/6">
+                      <img src="../assets/images/auth/login.svg" alt="Login" class="w-full">
+                  </div>
+                  <div class="w-1/6"></div>
+              </div>
+              <div class="w-full text-left flex justfiy-start px-16 my-10">
+                <form id="formAuth" class="bg-white w-full">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                      Username
+                    </label>
+                    <input type="text" class="c-form-control" name="username">
+                  </div>
+                  <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                      Password
+                    </label>
+                    <input type="password" class="c-form-control" name="password">
+                    <p class="text-red-500 text-xs italic mt-3">Username password salah!</p>
+                  </div>
+                  <div class="">
+                    <button type="submit" class="btn c-btn-primary">
+                      <i class="fas fa-sign-in-alt"></i> Masuk
+                    </button>
+                    <p class="mt-3 text-sm">Belum memiliki akun? <a class="c-text-primary" href="#">
+                      Daftar di sini
+                    </a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full text-center mb-5">
+            <span class="text-xs">Copyright &copy; 2020 &mdash; Dychord</span>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/jquery.js"></script>
+    <script src="../assets/scripts/app.js"></script>
+    <script>
+      $("#formAuth").submit(function(e){
+        e.preventDefault()
+        let formData = $(this).serializeArray()
+
+        if(formData[0].value == "romadhan"){
+          if(formData[1].value == "123321"){
+            localDB.setItem("sesLogged", 1)
+            pushPage("./index.html")
+          }
+          else{
+            console.log("salah")
+          }
+        }
+        else{
+          console.log("salah")
+        }
+      })
+    </script>
+</body>
+</html>
