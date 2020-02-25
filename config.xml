@@ -2,7 +2,6 @@
 <widget id="com.dycord.romadhanedy" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <icon src="res/icon/dychord.png" />
     <name>Dychord</name>
-    <preference name="StatusBarBackgroundColor" value="#474787" />
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -25,4 +24,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <engine name="android" spec="^7.1.4" />
 </widget>

@@ -12,15 +12,16 @@
 </head>
 <body>
     <div id="app">
-        <div class="flex flex-col w-full h-full">
-            <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-10">
-                <a href=""><i class="fab fa-rev"></i></a>
-                <div class="relative w-full flex justify-center items-center text-center">
-                    <a href="./index.html"><i class="fas fa-circle"></i></a>
-                </div>
-                <a href="./profile.html"><i class="far fa-user"></i></a>
+        <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-10">
+            <a href=""><i class="fab fa-rev"></i></a>
+            <div class="relative w-full flex justify-center items-center text-center">
+                <a href="./index.html"><i class="fas fa-circle"></i></a>
             </div>
-            <div class="c-wrapper-top p-8 pb-24">
+            <a href="./profile.html"><i class="far fa-user"></i></a>
+        </div>
+        <div class="flex flex-col w-full h-full">
+            <div class="c-wrapper-top p-6">
+                <div class="c-bg-wrapper"></div>
                 <div class="c-search">
                     <form action="">
                         <div class="c-search-wrapper flex items-center">
@@ -29,25 +30,28 @@
                         </div>
                     </form>
                 </div>
-                <div class="w-full flex flex-col mt-10">
-                    <span class="font-bold text-2xl c-text-white">Halo, Romadhan</span>
-                    <div class="c-divider-header bg-white mt-2"></div>
-                </div>
-                <div class="absolute left-0 mt-10 w-full mx-4">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        <img class="c-banner" src="../assets/images/dummy/banner.jpg">
+                <div class="w-full flex flex-row justify-between items-center mt-10">
+                    <div class="">
+                        <span id="showSesName" class="font-bold text-xl c-text-white"></span>
+                        <div class="c-divider-header bg-white mt-2"></div>
+                    </div>
+                    <div class="c-user-circle flex justify-center items-center">
+                        <i class="far fa-user"></i>
                     </div>
                 </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-3 mt-10">
+                    <img class="c-banner rounded" src="../assets/images/dummy/banner.jpg">
+                </div>
             </div>
-            <div class="mt-16 p-8">
-                <p class="text-2xl font-bold c-text-default">Chord terpopuler</p>
+            <div class="px-8 pb-20">
+                <p class="text-lg font-bold c-text-default">Chord terpopuler</p>
                 <div class="relative w-100 overflow-auto mt-5">
                     <div class="flex">
                         <div class="w-56 max-w-sm rounded overflow-hidden c-box-shadow mx-2">
                             <img class="w-full" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
                             <div class="px-6 py-4">
-                              <div class="font-bold text-xl mb-2">You Are The Reason</div>
-                              <p class="c-text-default text-base">
+                              <div class="font-bold text-base mb-2">You Are The Reason</div>
+                              <p class="c-text-default text-sm">
                                 Romadhan
                               </p>
                             </div>
@@ -60,5 +64,41 @@
 
     <script src="../assets/scripts/jquery.js"></script>
     <script src="../assets/scripts/appIndex.js"></script>
+    <script>
+        let sesName = localDB.getItem("sesName")
+        if(sesName.length > 12){
+            $('#showSesName').html("Halo, " + sesName.substring(0, 12) + " . . .")
+        }
+        else{
+            $('#showSesName').html("Halo, " + sesName)
+        }
+    </script>
+
+
+    <!-- CORDOVA -->
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script>
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown() {
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#0027a75c');
+
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 5) {
+                    StatusBar.backgroundColorByHexString('#4D000000');
+                } else {
+                    StatusBar.backgroundColorByHexString('#0027a75c');
+                }
+            });
+        }
+    </script>
 </body>
 </html>

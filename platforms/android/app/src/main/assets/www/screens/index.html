@@ -12,16 +12,21 @@
 </head>
 <body>
     <div id="app">
-        <div class="flex flex-col w-full h-full">
-            <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-10">
-                <a href=""><i class="fab fa-rev"></i></a>
-                <div class="relative w-full flex justify-center items-center text-center">
-                    <a href="./index.html"><i class="fas fa-circle"></i></a>
-                </div>
-                <a href="./profile.html"><i class="far fa-user"></i></a>
+        <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-5">
+            <a href=""><i class="fab fa-rev"></i>
+                Request
+            </a>
+            <div class="relative w-full flex justify-center items-center text-center">
+                <a href="./index.html"><i class="fab fa-accusoft"></i></a>
             </div>
-            <div class="c-wrapper-top p-8 pb-24">
-                <div class="c-search">
+            <a href="./profile.html"><i class="far fa-user"></i>
+                Profile
+            </a>
+        </div>
+        <div class="flex flex-col w-full h-full">
+            <div class="c-wrapper-top p-6">
+                <div class="c-bg-wrapper"></div>
+                <div class="c-search mt-10">
                     <form action="">
                         <div class="c-search-wrapper flex items-center">
                             <i class="fas fa-search"></i>
@@ -29,30 +34,95 @@
                         </div>
                     </form>
                 </div>
-                <div class="w-full flex flex-col mt-10">
-                    <span class="font-bold text-2xl c-text-white">Halo, Romadhan</span>
-                    <div class="c-divider-header bg-white mt-2"></div>
-                </div>
-                <div class="absolute left-0 mt-10 w-full mx-4">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        <img class="c-banner" src="../assets/images/dummy/banner.jpg">
+                <div class="w-full flex flex-row justify-between items-center mt-10">
+                    <div class="">
+                        <span id="showSesName" class="font-bold text-xl c-text-white"></span>
+                        <div class="c-divider-header bg-white mt-2"></div>
+                    </div>
+                    <div class="c-user-circle flex justify-center items-center">
+                        <img src="../assets/images/dummy/dygans2.jpg" alt="profile">
                     </div>
                 </div>
-            </div>
-            <div class="mt-16 p-8">
-                <p class="text-2xl font-bold c-text-default">Chord terpopuler</p>
-                <div class="relative w-100 overflow-auto mt-5">
-                    <div class="flex">
-                        <div class="w-56 max-w-sm rounded overflow-hidden c-box-shadow mx-2">
-                            <img class="w-full" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
+                <div class="-mr-6 overflow-auto circle whitespace-no-wrap">
+                    <div class="mt-12 w-full relative circle">
+                        <div class="w-56 inline-block max-w-sm circle border bg-white mr-3">
+                            <img class="w-full c-img-box" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
                             <div class="px-6 py-4">
-                              <div class="font-bold text-xl mb-2">You Are The Reason</div>
-                              <p class="c-text-default text-base">
-                                Romadhan
-                              </p>
+                                <div class="font-bold text-base mb-2">You Are The Reason</div>
+                                <p class="c-text-default text-sm">
+                                Callum Scoot
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-56 inline-block max-w-sm circle border bg-white mr-3">
+                            <img class="w-full c-img-box" src="../assets/images/dummy/thinking-out-loud.jpeg" alt="You Are The Reason">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-base mb-2">Thiking Out Loud</div>
+                                <p class="c-text-default text-sm">
+                                Ed Sheeran
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="px-8 pb-20">
+                <p class="text-lg font-bold c-text-default">Chord terpopuler</p>
+                <div class="c-divider-header bg-primary mt-2"></div>
+                <div class="relative w-100 overflow-auto mt-5">
+                    <ul>
+                        <li>
+                            <div class="flex justify-between">
+                                <div>
+                                    <div class="font-bold text-base mb-2">You Are The Reason</div>
+                                    <p class="c-text-default text-sm">
+                                    Callum Scoot
+                                    </p>
+                                </div>
+                                <div>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mt-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <div class="font-bold text-base mb-2">Thinking Out Loud</div>
+                                    <p class="c-text-default text-sm">
+                                    Ed Sheeran
+                                    </p>
+                                </div>
+                                <div>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon fas fa-star"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mt-4">
+                            <div class="flex justify-between">
+                                <div>
+                                    <div class="font-bold text-base mb-2">Let Her Go</div>
+                                    <p class="c-text-default text-sm">
+                                    Passanger
+                                    </p>
+                                </div>
+                                <div>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon active fas fa-star"></i>
+                                    <i class="star-icon fas fa-star"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -60,5 +130,38 @@
 
     <script src="../assets/scripts/jquery.js"></script>
     <script src="../assets/scripts/appIndex.js"></script>
+    <script>
+        let sesName = localDB.getItem("sesName")
+        if(sesName.length > 12){
+            $('#showSesName').html("Halo, " + sesName.substring(0, 12) + " . . .")
+        }
+        else{
+            $('#showSesName').html("Halo, " + sesName)
+        }
+
+        //CORDOVA
+
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown() {
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#0027a75c');
+
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 5) {
+                    StatusBar.backgroundColorByHexString('#4D000000');
+                } else {
+                    StatusBar.backgroundColorByHexString('#0027a75c');
+                }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="flex items-center justify-center flex-col h-full">
+        <div class="fixed flex items-center justify-center flex-col h-full">
             <div class="flex mt-20">
                 <div class="w-1/6"></div>
                 <div class="w-4/6">
@@ -40,6 +40,21 @@
         setTimeout(function(){
             window.location = "screens/index.html"
         }, 4000)
+
+
+        // CORDOVA 
+
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);  
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown(){
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#00000000');
+        }
     </script>
 </body>
 </html>

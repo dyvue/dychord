@@ -14,11 +14,12 @@
 #app{
     width: 100%;
     height: 100%;
-    position: absolute;
     overflow: auto;
 }
 body{
     font-family: Poppins-Regular;
+    height: 100%;
+    margin: 0;
 }
 
 .c-text-primary{
@@ -30,37 +31,40 @@ body{
 .c-text-white{
     color: #fff;
 }
+a, button{
+    -webkit-tap-highlight-color: transparent;
+}
 .btn{
+    display: block;
     color: #fff;
     padding: 8px 16px;
-    border-radius: 30px;
     border: none;
-    outline: none;
+    outline: none !important;
     position: relative;
     text-align: center;
-    -webkit-transition-duration:.3s;
     transition-duration:.3s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 30px;
 }
-.btn:focus{
-    outline: none;
-}
+.btn:focus {outline:0;
+    border-radius: 30px;}
 .btn:after {
     content: "";
     background: rgba(255, 255, 255, .3);
     display: block;
     position: absolute;
     border-radius: 30px;
-    padding-top: 300%;
-    padding-left: 350%;
+    top: 0;
+    left: 0;
     margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
     transition: all 1s
   }
 .btn:active:after{
+    border-radius: 30px;
     padding: 0;
     margin: 0;
     opacity: 1;
@@ -96,15 +100,54 @@ body{
     margin-right: 15px;
 }
 .c-form-control.search{
+    padding: 1px;
     border: none;
 }
 .c-wrapper-top{
+    position: relative;
+    overflow: hidden;
+}
+.c-bg-wrapper{
     background-color: #474787;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+    width: 100%;
+    height: 270px;
+    z-index: -1;
+}
+.c-bg-wrapper:before{
+    content: '';
+    position: absolute;
+    left: -192px;
+    top: -350px;
+    width: 120%;
+    height: 400px;
+    background-color: rgba(0,0,0,.2);
+    transform: rotate(-60deg);
+}
+.c-bg-wrapper:after{
+    content: '';
+    position: absolute;
+    left: -200px;
+    top: -400px;
+    width: 120%;
+    height: 400px;
+    background-color: rgba(0,0,0,.2);
+    transform: rotate(-60deg);
 }
 .c-box-shadow{
     border: 1px solid #eee
+}
+.c-user-circle{
+    color: #474787;
+    font-size: 20px;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
 }
 
 
@@ -146,14 +189,16 @@ body{
 /* TABS */
 .tabs{
     background-color: #474787;
-    border-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 9999;
 }
 .tabs a{
     color: #fff;
-    padding: 20px;
+    padding: 15px 20px;
 }
 .tabs a i{
-    font-size: 25px;
+    font-size: 20px;
 }
 .tabs .relative a{
     position: absolute;

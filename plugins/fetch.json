@@ -7,6 +7,14 @@
     "is_top_level": true,
     "variables": {}
   },
+  "cordova-plugin-browsersync": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-browsersync@^1.1.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
@@ -15,10 +23,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-browsersync": {
+  "cordova-plugin-livereload": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-browsersync@^1.1.0"
+      "id": "cordova-plugin-livereload@^1.2.2"
     },
     "is_top_level": true,
     "variables": {}

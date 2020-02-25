@@ -12,8 +12,8 @@
 </head>
 <body>
     <div id="app">
-        <div class="flex items-center justify-center flex-col w-full h-full">
-            <div class="w-full flex justify-center flex-col items-center text-center">
+        <div class="fixed flex items-center justify-center flex-col w-full h-full">
+            <div class="w-full h-full flex justify-center flex-col items-center text-center">
                 <div id="intro1" class="c-intro active">
                     <div class="flex justify-center flex-col items-center">
                         <span class="font-bold text-3xl c-text-default">Selamat Datang</span>
@@ -60,11 +60,14 @@
                     </div>
                     <div class="mx-10 my-5">
                         <span>Kamu bisa request lagu terbaru kesukaanmu dan nanti akan ditulis oleh Admin kami.</span>
+                        <div class="mt-10">
+                            <input id="inputName" type="text" class="c-form-control" placeholder="Masukan Nama">
+                            <p id="inputMessage" class="text-left text-red-500 text-xs italic mt-3">Nama harus diisi!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="fixed bottom-0 left-0 w-full flex justify-between mb-10 px-5">
-                    <div id="mainAction" class="w-full flex justify-between">
-                        <button id="actionBtnSkip" class="btn c-btn-outline-primary">Lewati Saja</button>
+                    <div id="mainAction" class="w-full flex justify-end">
                         <button id="actionBtnNext" class="btn c-btn-primary">Selanjutnya <i class="fas fa-arrow-alt-circle-right"></i></button>
                     </div>
                     <div id="lastAction" class="w-full flex justify-end">
@@ -82,10 +85,6 @@
         $('#intro3').hide()
         $('#lastAction').hide()
 
-        $('#actionBtnSkip').click(function(e){
-            e.preventDefault()
-            window.location = "login.html"
-        })
         $("#actionBtnNext").click(function(e){
             e.preventDefault()
             
@@ -105,10 +104,20 @@
                 $('#lastAction').fadeIn()
             }
         })
+        $('#inputMessage').hide()
         $('#actionBtnStart').click(function(e){
-            e.preventDefault()
-            localDB.setItem("sesIntro", 1)
-            pushPage("../login.html")
+            let inputName = $('#inputName').val()
+
+            if(inputName != ""){
+                e.preventDefault()
+                localDB.setItem("sesIntro", 1)
+                localDB.setItem("sesLogged", 1)
+                localDB.setItem("sesName", inputName)
+                pushPage("../index.html")
+            }
+            else{
+                $('#inputMessage').fadeIn("slow")
+            }
         })
     </script>
 </body>

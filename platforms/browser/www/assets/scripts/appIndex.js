@@ -13,7 +13,7 @@ if(localDB.getItem("sesIntro") != 1){
 }
 else{
     if(localDB.getItem("sesLogged") != 1){
-        pushPage("login.html")
+        pushPage("intro/index.html")
     }
     else{
         setTimeout(function(){
