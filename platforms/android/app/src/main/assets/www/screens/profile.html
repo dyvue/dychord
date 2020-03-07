@@ -11,20 +11,26 @@
     <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
 </head>
 <body>
-    <div id="app">
-        <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-10">
-            <a href=""><i class="fab fa-rev"></i></a>
+    <div onload="onLoad()" id="app">
+        <div class="tabs fixed bottom-0 left-0 w-full flex justify-between px-5">
+            <a href=""><i class="fab fa-rev"></i>
+                Request
+            </a>
             <div class="relative w-full flex justify-center items-center text-center">
-                <a href="./index.html"><i class="fas fa-circle"></i></a>
+                <a href="./index.html"><i class="fab fa-accusoft"></i>
+                </a>
             </div>
-            <a href="./profile.html"><i class="far fa-user"></i></a>
+            <a href="./profile.html"><i class="far fa-user"></i>
+                Profile
+            </a>
         </div>
-        <div class="flex flex-col w-full h-full">
+        <div class="flex flex-col w-full">
             <div class="c-wrapper-top p-6">
-                <div class="c-bg-wrapper"></div>
-                <div class="w-full flex flex-row justify-between items-center mt-10">
+                <div class="c-bg-wrapper">
+                </div>
+                <div class="relative w-full flex flex-row justify-between items-center mt-10">
                     <div class="">
-                        <span id="showSesName" class="font-bold text-xl c-text-white"></span>
+                        <span class="font-bold text-xl c-text-white">Profile Saya</span>
                         <div class="c-divider-header bg-white mt-2"></div>
                     </div>
                 </div>
@@ -34,7 +40,7 @@
             <div class="max-w-sm rounded overflow-hidden">
                 <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">Point Kamu</div>
-                    <p class="font-bold text-xl text-yellow-500">
+                    <p class="font-bold text-xl text-yellow-400">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -61,6 +67,9 @@
 
     <script src="../assets/scripts/jquery.js"></script>
     <script src="../assets/scripts/appIndex.js"></script>
+
+    
+    <script src="../cordova.js"></script>
     <script>
         let sesName = localDB.getItem("sesName")
         $('#showSesName').html(sesName)
@@ -72,8 +81,6 @@
 
             if(inputName != ""){
                 e.preventDefault()
-                localDB.setItem("sesIntro", 1)
-                localDB.setItem("sesLogged", 1)
                 localDB.setItem("sesName", inputName)
                 pushPage("../index.html")
             }
@@ -81,6 +88,30 @@
                 $('#inputMessage').fadeIn("slow")
             }
         })
+
+        //CORDOVA
+
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown() {
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#0027a75c');
+
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 5) {
+                    StatusBar.backgroundColorByHexString('#4D000000');
+                } else {
+                    StatusBar.backgroundColorByHexString('#0027a75c');
+                }
+            });
+        }
     </script>
 </body>
 </html>

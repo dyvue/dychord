@@ -10,14 +10,15 @@
     <link rel="stylesheet" type="text/css" href="../assets/styles/font.css">
     <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
 </head>
-<body>
+<body onload="onLoad()">
     <div id="app">
-        <div class="tabs fixed bottom-0 lef-0 w-full flex justify-between px-5">
+        <div class="tabs fixed bottom-0 left-0 w-full flex justify-between px-5">
             <a href=""><i class="fab fa-rev"></i>
                 Request
             </a>
             <div class="relative w-full flex justify-center items-center text-center">
-                <a href="./index.html"><i class="fab fa-accusoft"></i></a>
+                <a href="./index.html"><i class="fab fa-accusoft"></i>
+                </a>
             </div>
             <a href="./profile.html"><i class="far fa-user"></i>
                 Profile
@@ -25,7 +26,8 @@
         </div>
         <div class="flex flex-col w-full h-full">
             <div class="c-wrapper-top p-6">
-                <div class="c-bg-wrapper"></div>
+                <div class="c-bg-wrapper">
+                </div>
                 <div class="c-search mt-10">
                     <form action="">
                         <div class="c-search-wrapper flex items-center">
@@ -34,27 +36,29 @@
                         </div>
                     </form>
                 </div>
-                <div class="w-full flex flex-row justify-between items-center mt-10">
+                <div class="relative w-full flex flex-row justify-between items-center mt-10">
                     <div class="">
                         <span id="showSesName" class="font-bold text-xl c-text-white"></span>
                         <div class="c-divider-header bg-white mt-2"></div>
                     </div>
-                    <div class="c-user-circle flex justify-center items-center">
-                        <img src="../assets/images/dummy/dygans2.jpg" alt="profile">
+                    <div class="c-song-image flex justify-center items-center">
+                        <img src="../assets/images/dummy/song.png" alt="profile">
                     </div>
                 </div>
-                <div class="-mr-6 overflow-auto circle whitespace-no-wrap">
-                    <div class="mt-12 w-full relative circle">
-                        <div class="w-56 inline-block max-w-sm circle border bg-white mr-3">
-                            <img class="w-full c-img-box" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
-                            <div class="px-6 py-4">
-                                <div class="font-bold text-base mb-2">You Are The Reason</div>
-                                <p class="c-text-default text-sm">
-                                Callum Scoot
-                                </p>
+                <div class="-mr-6 overflow-auto whitespace-no-wrap">
+                    <div class="mt-12 w-full relative pb-4">
+                        <a href="./chord.html">
+                            <div class="w-56 inline-block max-w-sm circle shadow-lg bg-white mr-3">
+                                <img class="w-full c-img-box" src="../assets/images/dummy/youarethereason.jpg" alt="You Are The Reason">
+                                <div class="px-6 py-4">
+                                    <div class="font-bold text-base mb-2">You Are The Reason</div>
+                                    <p class="c-text-default text-sm">
+                                    Callum Scoot
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="w-56 inline-block max-w-sm circle border bg-white mr-3">
+                        </a>
+                        <div class="w-56 inline-block max-w-sm circle shadow-lg bg-white mr-3">
                             <img class="w-full c-img-box" src="../assets/images/dummy/thinking-out-loud.jpeg" alt="You Are The Reason">
                             <div class="px-6 py-4">
                                 <div class="font-bold text-base mb-2">Thiking Out Loud</div>
@@ -66,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="px-8 pb-20">
+            <div class="px-8 pb-14">
                 <p class="text-lg font-bold c-text-default">Chord terpopuler</p>
                 <div class="c-divider-header bg-primary mt-2"></div>
                 <div class="relative w-100 overflow-auto mt-5">
@@ -130,6 +134,9 @@
 
     <script src="../assets/scripts/jquery.js"></script>
     <script src="../assets/scripts/appIndex.js"></script>
+    <script async src="../assets/scripts/background.js"></script>
+
+    <script src="../cordova.js"></script>
     <script>
         let sesName = localDB.getItem("sesName")
         if(sesName.length > 12){

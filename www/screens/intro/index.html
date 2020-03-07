@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/styles/font.css">
     <link rel="stylesheet" type="text/css" href="../../assets/styles/style.css">
 </head>
-<body>
+<body onload="onLoad()">
     <div id="app">
         <div class="fixed flex items-center justify-center flex-col w-full h-full">
             <div class="w-full h-full flex justify-center flex-col items-center text-center">
@@ -27,7 +27,7 @@
                         <div class="w-1/6"></div>
                     </div>
                     <div class="mx-10 my-5">
-                        <span>Selamat datang, Cari chord lagu kesukaanmu dan aransemen sesuka hatimu.</span>
+                        <span class="c-text-default">Selamat datang, Cari chord lagu kesukaanmu dan aransemen sesuka hatimu.</span>
                     </div>
                 </div>
                 <div id="intro2" class="c-intro">
@@ -43,7 +43,7 @@
                         <div class="w-1/6"></div>
                     </div>
                     <div class="mx-10 my-5">
-                        <span>Dychord menyajikan konten berbagai macam chord lagu yang ada diseluruh dunia.</span>
+                        <span class="c-text-default">Dychord menyajikan konten berbagai macam chord lagu yang ada diseluruh dunia.</span>
                     </div>
                 </div>
                 <div id="intro3" class="c-intro">
@@ -59,7 +59,7 @@
                         <div class="w-1/6"></div>
                     </div>
                     <div class="mx-10 my-5">
-                        <span>Kamu bisa request lagu terbaru kesukaanmu dan nanti akan ditulis oleh Admin kami.</span>
+                        <span class="c-text-default">Kamu bisa request lagu terbaru kesukaanmu dan nanti akan ditulis oleh Admin kami.</span>
                         <div class="mt-10">
                             <input id="inputName" type="text" class="c-form-control" placeholder="Masukan Nama">
                             <p id="inputMessage" class="text-left text-red-500 text-xs italic mt-3">Nama harus diisi!</p>
@@ -119,6 +119,22 @@
                 $('#inputMessage').fadeIn("slow")
             }
         })
+    </script>
+    <script src="../../cordova.js"></script>
+    <script>
+         // CORDOVA 
+
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);  
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown(){
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#FF474787');
+        }
     </script>
 </body>
 </html>

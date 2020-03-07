@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/font.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>
-<body>
+<body onload="onLoad()">
     <div id="app">
         <div class="fixed flex items-center justify-center flex-col h-full">
             <div class="flex mt-20">
@@ -33,6 +33,7 @@
 
     <script src="assets/scripts/jquery.js"></script>
     <script src="assets/scripts/app.js"></script>
+    <script src="cordova.js"></script>
     <script>
         setTimeout(function(){
             $('#app').fadeOut("slow")
@@ -53,7 +54,7 @@
         }
         function onDeviceReady() {
             StatusBar.overlaysWebView(true);
-            StatusBar.backgroundColorByHexString('#00000000');
+            StatusBar.backgroundColorByHexString('#FF474787');
         }
     </script>
 </body>

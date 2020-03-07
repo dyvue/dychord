@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Dychord</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/tailwind.css">
+    
+    <link rel="stylesheet" type="text/css" href="../assets/styles/font.css">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+</head>
+<body>
+    <div onload="onLoad()" id="app">
+        <div class="tabs fixed bottom-0 left-0 w-full flex justify-between px-5">
+            <a href=""><i class="fab fa-rev"></i>
+                Request
+            </a>
+            <div class="relative w-full flex justify-center items-center text-center">
+                <a href="./index.html"><i class="fab fa-accusoft"></i>
+                </a>
+            </div>
+            <a href="./profile.html"><i class="far fa-user"></i>
+                Profile
+            </a>
+        </div>
+        <div class="flex flex-col w-full">
+            <div class="c-wrapper-top p-6">
+                <div class="c-bg-wrapper">
+                </div>
+                <div class="relative w-full flex flex-row justify-between items-center mt-10">
+                    <div class="">
+                        <span class="font-bold text-xl c-text-white">You Are The Reason</span>
+                        <div class="c-divider-header bg-white mt-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3 px-5">
+            <div class="indicator flex">
+                <button class="btn c-btn-primary mr-2 c-no-circle"><i class="fas fa-arrow-down"></i></button>
+                <button class="btn c-btn-primary mr-2 c-no-circle"><i class="fas fa-arrow-up"></i></button>
+                <button class="btn c-btn-primary mr-2 c-no-circle">AutoScrool</button>
+            </div>
+            <div class="body mt-5 mb-10">
+                <p>Intro:&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>..<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a>..<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>….<br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    There goes my heart beating<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    Cause you are the reason<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    I'm losing my sleep<br>
+                    <a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    ..Please come back now..<br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    There goes my mind racing<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    And you are the reason<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    That I'm still breathing<br>
+                    <a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    ..I'm hopeless now..<br>
+                    <br>
+                    Reff:<br>
+                    &nbsp; &nbsp; &nbsp; -<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; I'd climb every mountain<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    &nbsp; ..And swim every ocean<br>
+                    &nbsp; -<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; Just to be with you<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp;&nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    &nbsp; ..And fix what I've broken..<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp;<a class="tbi-tooltip">Em<span class="custom tbi-Em"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp; <a class="tbi-tooltip">Fm<span class="custom tbi-Fm"></span></a><br>
+                    &nbsp; Oh, cause I need you..to&nbsp; see<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    &nbsp; That you are the reason..<br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    There goes my hands shaking<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    Cause you are the reason<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    My heart keeps bleeding<br>
+                    <a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    ..And I need you now<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    If I could turn back the clock<br>
+                    &nbsp; &nbsp; <a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    I'd make sure the light defeated the dark<br>
+                    &nbsp; &nbsp;-<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    I'd spend every hour, of every day<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    Keeping you safe..<br>
+                    <br>
+                    Reff:<br>
+                    &nbsp; &nbsp; &nbsp; -<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; I'd climb every mountain<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    &nbsp; ..And swim every ocean<br>
+                    &nbsp; -<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; Just to be with you<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp;&nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    &nbsp; ..And fix what I've broken..<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp;<a class="tbi-tooltip">Em<span class="custom tbi-Em"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp; <a class="tbi-tooltip">Fm<span class="custom tbi-Fm"></span></a><br>
+                    &nbsp; Oh, cause I need you..to&nbsp; see<br>
+                    <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    That you are the reason<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    <span style="color: blue;">I don't wanna fight no more</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    <span style="color: blue;">I don't wanna hide no more</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    <span style="color: blue;">I don't wanna cry no more</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Em<span class="custom tbi-Em"></span></a>&nbsp; &nbsp; &nbsp; <br>
+                    <span style="color: blue;">Oh, cause I need you to see</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    (You are the reason)<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    <span style="color: blue;">A little closer now</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    <span style="color: blue;">Just a little closer now</span><br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; <a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    <span style="color: blue;">Come a little closer now</span><br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Em<span class="custom tbi-Em"></span></a>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    I need you to hold me tonight..<br>
+                    <br>
+                    Reff:<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; I'd climb every mountain<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a><br>
+                    &nbsp; ..And swim every ocean<br>
+                    &nbsp; -<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a><br>
+                    &nbsp; Just to be with you<br>
+                    &nbsp;&nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp;&nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">G<span class="custom tbi-G"></span></a><br>
+                    &nbsp; ..And fix what I've broken..<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">Am<span class="custom tbi-Am"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">G/B<span class="custom tbi-GB"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a>&nbsp; &nbsp;<a class="tbi-tooltip">Em<span class="custom tbi-Em"></span></a>&nbsp;&nbsp;<a class="tbi-tooltip">F<span class="custom tbi-F"></span></a>&nbsp; <a class="tbi-tooltip">Fm<span class="custom tbi-Fm"></span></a><br>
+                    &nbsp; Oh, cause I need you..to&nbsp; see<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a class="tbi-tooltip">C<span class="custom tbi-C"></span></a><br>
+                    &nbsp; That you are the reason..
+                </p>
+            </div>
+            <div class="mt-10">
+                <h4>Direkomendasikan</h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/jquery.js"></script>
+    <script src="../assets/scripts/appIndex.js"></script>
+
+    
+    <script src="../cordova.js"></script>
+    <script>
+        let sesName = localDB.getItem("sesName")
+        $('#showSesName').html(sesName)
+        $('#inputName').val(sesName)
+
+        $('#inputMessage').hide()
+        $('#actionBtnStart').click(function(e){
+            let inputName = $('#inputName').val()
+
+            if(inputName != ""){
+                e.preventDefault()
+                localDB.setItem("sesName", inputName)
+                pushPage("../index.html")
+            }
+            else{
+                $('#inputMessage').fadeIn("slow")
+            }
+        })
+
+        //CORDOVA
+
+        function onLoad() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function onBackKeyDown() {
+            navigator.app.exitApp();
+        }
+        function onDeviceReady() {
+            StatusBar.overlaysWebView(true);
+            StatusBar.backgroundColorByHexString('#0027a75c');
+
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 5) {
+                    StatusBar.backgroundColorByHexString('#4D000000');
+                } else {
+                    StatusBar.backgroundColorByHexString('#0027a75c');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
